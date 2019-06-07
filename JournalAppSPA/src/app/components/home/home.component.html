@@ -1,0 +1,264 @@
+<div class="home">
+  <div class="home__important">
+    <app-box class="home__important__box--main"
+    [id]="importantNews[0].id"
+    [title]="importantNews[0].shortTitle"
+    [photo]="importantNews[0].photoUrlHuge"
+    [section]="importantNews[0].section"
+    ></app-box>
+    <app-latest-news class="home__important__box--latest"
+    [news]="latestNews"></app-latest-news>
+    <app-box class="home__important__box-sub"
+    [id]="importantNews[1].id"
+    [title]="importantNews[1].shortTitle"
+    [photo]="importantNews[1].photoUrlLarge"
+    [section]="importantNews[1].section"
+    ></app-box>
+    <app-box class="home__important__box-sub"
+    [id]="importantNews[2].id"
+    [title]="importantNews[2].shortTitle"
+    [photo]="importantNews[2].photoUrlLarge"
+    [section]="importantNews[2].section"
+    ></app-box>
+    <app-box class="home__important__box-sub"
+    [id]="importantNews[3].id"
+    [title]="importantNews[3].shortTitle"
+    [photo]="importantNews[3].photoUrlLarge"
+    [section]="importantNews[3].section"
+    ></app-box>
+    <app-box class="home__important__box-sub"
+    [id]="importantNews[4].id"
+    [title]="importantNews[4].shortTitle"
+    [photo]="importantNews[4].photoUrlLarge"
+    [section]="importantNews[4].section"
+    ></app-box>
+    <app-box class="home__important__box-sub"
+    [id]="importantNews[5].id"
+    [title]="importantNews[5].shortTitle"
+    [photo]="importantNews[5].photoUrlLarge"
+    [section]="importantNews[5].section"
+    ></app-box>
+    <app-box class="home__important__box-sub home__important__box-sub--latest"
+    [id]="importantNews[6].id"
+    [title]="importantNews[6].shortTitle"
+    [photo]="importantNews[6].photoUrlLarge"
+    [section]="importantNews[6].section"
+    ></app-box>
+  </div>
+
+  <app-section-header 
+  [sectionRoute]="'poland'"
+  [sectionName]="'Polska'"
+  ></app-section-header>
+  <div class="home__others">
+    <app-box class="home__others__main-box--1"
+      [id]="sectionPolandNews[0].id"
+      [title]="sectionPolandNews[0].shortTitle"
+      [photo]="sectionPolandNews[0].photoUrlLarge"
+      [section]="sectionPolandNews[0].section"
+     ></app-box>
+     <app-box class="home__others__main-box--2"
+     [id]="sectionPolandNews[1].id"
+     [title]="sectionPolandNews[1].shortTitle"
+     [photo]="sectionPolandNews[1].photoUrlLarge"
+     [section]="sectionPolandNews[1].section"
+    ></app-box>
+    <app-box class="home__others__sub-box--1"
+      [id]="sectionPolandNews[2].id"
+      [title]="sectionPolandNews[2].shortTitle"
+      [photo]="sectionPolandNews[2].photoUrlLarge"
+      [section]="sectionPolandNews[2].section"
+     ></app-box>
+     <app-box class="home__others__sub-box--2"
+     [id]="sectionPolandNews[3].id"
+     [title]="sectionPolandNews[3].shortTitle"
+     [photo]="sectionPolandNews[3].photoUrlLarge"
+     [section]="sectionPolandNews[3].section"
+    ></app-box>
+    <app-box class="home__others__sub-box--3"
+      [id]="sectionPolandNews[4].id"
+      [title]="sectionPolandNews[4].shortTitle"
+      [photo]="sectionPolandNews[4].photoUrlLarge"
+      [section]="sectionPolandNews[4].section"
+     ></app-box>
+     <app-box class="home__others__sub-box--4"
+     [id]="sectionPolandNews[5].id"
+     [title]="sectionPolandNews[5].shortTitle"
+     [photo]="sectionPolandNews[5].photoUrlLarge"
+     [section]="sectionPolandNews[5].section"
+    ></app-box>
+  </div>
+
+  <app-section-header 
+  [sectionRoute]="'world'"
+  [sectionName]="'Świat'"
+  ></app-section-header>
+  <div class="home__others">
+    <app-box class="home__others__main-box--1"
+      [id]="sectionWorldNews[0].id"
+      [title]="sectionWorldNews[0].shortTitle"
+      [photo]="sectionWorldNews[0].photoUrlLarge"
+      [section]="sectionWorldNews[0].section"
+     ></app-box>
+     <app-box class="home__others__main-box--2"
+     [id]="sectionWorldNews[1].id"
+     [title]="sectionWorldNews[1].shortTitle"
+     [photo]="sectionWorldNews[1].photoUrlLarge"
+     [section]="sectionWorldNews[1].section"
+    ></app-box>
+    <app-box class="home__others__sub-box--1"
+      [id]="sectionWorldNews[2].id"
+      [title]="sectionWorldNews[2].shortTitle"
+      [photo]="sectionWorldNews[2].photoUrlLarge"
+      [section]="sectionWorldNews[2].section"
+     ></app-box>
+     <app-box class="home__others__sub-box--2"
+     [id]="sectionWorldNews[3].id"
+     [title]="sectionWorldNews[3].shortTitle"
+     [photo]="sectionWorldNews[3].photoUrlLarge"
+     [section]="sectionWorldNews[3].section"
+    ></app-box>
+    <app-box class="home__others__sub-box--3"
+      [id]="sectionWorldNews[4].id"
+      [title]="sectionWorldNews[4].shortTitle"
+      [photo]="sectionWorldNews[4].photoUrlLarge"
+      [section]="sectionWorldNews[4].section"
+     ></app-box>
+     <app-box class="home__others__sub-box--4"
+     [id]="sectionWorldNews[5].id"
+     [title]="sectionWorldNews[5].shortTitle"
+     [photo]="sectionWorldNews[5].photoUrlLarge"
+     [section]="sectionWorldNews[5].section"
+    ></app-box>
+  </div>
+
+  <app-section-header 
+  [sectionRoute]="'policy'"
+  [sectionName]="'Polityka'"
+  ></app-section-header>
+  <div class="home__others">
+    <app-box class="home__others__main-box--1"
+      [id]="sectionPolicyNews[0].id"
+      [title]="sectionPolicyNews[0].shortTitle"
+      [photo]="sectionPolicyNews[0].photoUrlLarge"
+      [section]="sectionPolicyNews[0].section"
+     ></app-box>
+     <app-box class="home__others__main-box--2"
+     [id]="sectionPolicyNews[1].id"
+     [title]="sectionPolicyNews[1].shortTitle"
+     [photo]="sectionPolicyNews[1].photoUrlLarge"
+     [section]="sectionPolicyNews[1].section"
+    ></app-box>
+    <app-box class="home__others__sub-box--1"
+      [id]="sectionPolicyNews[2].id"
+      [title]="sectionPolicyNews[2].shortTitle"
+      [photo]="sectionPolicyNews[2].photoUrlLarge"
+      [section]="sectionPolicyNews[2].section"
+     ></app-box>
+     <app-box class="home__others__sub-box--2"
+     [id]="sectionPolicyNews[3].id"
+     [title]="sectionPolicyNews[3].shortTitle"
+     [photo]="sectionPolicyNews[3].photoUrlLarge"
+     [section]="sectionPolicyNews[3].section"
+    ></app-box>
+    <app-box class="home__others__sub-box--3"
+      [id]="sectionPolicyNews[4].id"
+      [title]="sectionPolicyNews[4].shortTitle"
+      [photo]="sectionPolicyNews[4].photoUrlLarge"
+      [section]="sectionPolicyNews[4].section"
+     ></app-box>
+     <app-box class="home__others__sub-box--4"
+     [id]="sectionPolicyNews[5].id"
+     [title]="sectionPolicyNews[5].shortTitle"
+     [photo]="sectionPolicyNews[5].photoUrlLarge"
+     [section]="sectionPolicyNews[5].section"
+    ></app-box>
+  </div>
+
+  <app-section-header 
+  [sectionRoute]="'business'"
+  [sectionName]="'Biznes'"
+  ></app-section-header>
+  <div class="home__others">
+    <app-box class="home__others__main-box--1"
+      [id]="sectionBusinessNews[0].id"
+      [title]="sectionBusinessNews[0].shortTitle"
+      [photo]="sectionBusinessNews[0].photoUrlLarge"
+      [section]="sectionBusinessNews[0].section"
+     ></app-box>
+     <app-box class="home__others__main-box--2"
+     [id]="sectionBusinessNews[1].id"
+     [title]="sectionBusinessNews[1].shortTitle"
+     [photo]="sectionBusinessNews[1].photoUrlLarge"
+     [section]="sectionBusinessNews[1].section"
+    ></app-box>
+    <app-box class="home__others__sub-box--1"
+      [id]="sectionBusinessNews[2].id"
+      [title]="sectionBusinessNews[2].shortTitle"
+      [photo]="sectionBusinessNews[2].photoUrlLarge"
+      [section]="sectionBusinessNews[2].section"
+     ></app-box>
+     <app-box class="home__others__sub-box--2"
+     [id]="sectionBusinessNews[3].id"
+     [title]="sectionBusinessNews[3].shortTitle"
+     [photo]="sectionBusinessNews[3].photoUrlLarge"
+     [section]="sectionBusinessNews[3].section"
+    ></app-box>
+    <app-box class="home__others__sub-box--3"
+      [id]="sectionBusinessNews[4].id"
+      [title]="sectionBusinessNews[4].shortTitle"
+      [photo]="sectionBusinessNews[4].photoUrlLarge"
+      [section]="sectionBusinessNews[4].section"
+     ></app-box>
+     <app-box class="home__others__sub-box--4"
+     [id]="sectionBusinessNews[5].id"
+     [title]="sectionBusinessNews[5].shortTitle"
+     [photo]="sectionBusinessNews[5].photoUrlLarge"
+     [section]="sectionBusinessNews[5].section"
+    ></app-box>
+  </div>
+
+  <app-section-header 
+  [sectionRoute]="'sport'"
+  [sectionName]="'Sport'"
+  ></app-section-header>
+  <div class="home__others">
+    <app-box class="home__others__main-box--1"
+      [id]="sectionSportNews[0].id"
+      [title]="sectionSportNews[0].shortTitle"
+      [photo]="sectionSportNews[0].photoUrlLarge"
+      [section]="sectionSportNews[0].section"
+     ></app-box>
+     <app-box class="home__others__main-box--2"
+     [id]="sectionSportNews[1].id"
+     [title]="sectionSportNews[1].shortTitle"
+     [photo]="sectionSportNews[1].photoUrlLarge"
+     [section]="sectionSportNews[1].section"
+    ></app-box>
+    <app-box class="home__others__sub-box--1"
+      [id]="sectionSportNews[2].id"
+      [title]="sectionSportNews[2].shortTitle"
+      [photo]="sectionSportNews[2].photoUrlLarge"
+      [section]="sectionSportNews[2].section"
+     ></app-box>
+     <app-box class="home__others__sub-box--2"
+     [id]="sectionSportNews[3].id"
+     [title]="sectionSportNews[3].shortTitle"
+     [photo]="sectionSportNews[3].photoUrlLarge"
+     [section]="sectionSportNews[3].section"
+    ></app-box>
+    <app-box class="home__others__sub-box--3"
+      [id]="sectionSportNews[4].id"
+      [title]="sectionSportNews[4].shortTitle"
+      [photo]="sectionSportNews[4].photoUrlLarge"
+      [section]="sectionSportNews[4].section"
+     ></app-box>
+     <app-box class="home__others__sub-box--4"
+     [id]="sectionSportNews[5].id"
+     [title]="sectionSportNews[5].shortTitle"
+     [photo]="sectionSportNews[5].photoUrlLarge"
+     [section]="sectionSportNews[5].section"
+    ></app-box>
+  </div>
+</div>
+

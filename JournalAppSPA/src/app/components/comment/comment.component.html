@@ -1,0 +1,25 @@
+<div class="comment">
+  <div class="comment__header">
+   <div class="comment__header--public">
+      <img src="{{comment.authorPhoto}}" alt="" class="comment__header__img">
+    <span class="comment__header__author">{{comment.author}}</span>
+   </div>
+    <div>
+        <button class="btn btn--delete" (click)="deleteModal.open()"
+        *appHasRole="['Moderator']"><i class="fa fa-trash"></i></button>
+        <modal #deleteModal>
+            <ng-template #modalHeader><h2>Czy chcesz usunąć ten komentarz?</h2></ng-template>
+            <ng-template #modalBody>
+            <div class="admin-panel__modal">
+              <button class="btn btn--success" 
+              (click)="deleteComment()"
+              (click)="deleteModal.close()">Tak</button>
+              <button class="btn btn--primary"
+              (click)="deleteModal.close()">Nie</button>
+            </div>
+            </ng-template>
+          </modal>
+    </div>
+  </div>
+  <div class="comment__content">{{comment.content}}</div>
+</div>

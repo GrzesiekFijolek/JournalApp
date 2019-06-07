@@ -1,0 +1,60 @@
+
+<div class="edit-news">
+    <form (ngSubmit)="addNews()" #newsForm="ngForm">
+      <div class="form__group">
+        <h1 class="heading-primary fomr__item form__item--flex">Dodaj artykuł</h1>
+        <div class="form__item">
+          <h2 class="edit-news__heading"><span class="heading-secondary--main">Wybierz Zdjęcie:</span><span class="heading-secondary--sub">(Fotografia powinna mieć minimum 1000px szerokości i proporcje około 9:5)</span> </h2>
+          <input type="file" #file class="form__file" accept="image/png, image/jpeg" name="file" id="file" (change)="imgPreview($event)" required>
+          <button type="button" class="btn btn--file"><label class="btn--label" for="file">Wybierz plik</label></button>
+          <img [src]="imgURL" *ngIf="imgURL" class="form__img">
+        </div>
+        <div class="form__item">
+          <h2 class="edit-news__heading"><span class="heading-secondary--main">Krótki tytuł: </span><span class="heading-secondary--sub">(Wyświetla się w widoku sekcji jako podpis pod fotografią)</span></h2>
+          <input type="text" class="form__input"
+          [(ngModel)]="news.shortTitle" name="ShortTitle" placeholder="{{news.shortTitle}}" required>
+        </div>
+  
+        <div class="form__item">
+          <h2 class="edit-news__heading"><span class="heading-secondary--main">Tytuł: </span><span class="heading-secondary--sub">(Nagłowek dla widoku artykułu)</span></h2>
+          <textarea rows="1" class="form__input"
+          [(ngModel)]="news.title" name="Title" required></textarea>
+        </div>
+        
+        <div class="form__item">
+          <h2 class="edit-news__heading"><span class="heading-secondary--main">Nagłówek: </span><span class="heading-secondary--sub">(Rozwinięcie znajdujące się pod fotografia w widoku artykułu)</span></h2>
+          <textarea rows="1" class="form__input"
+          [(ngModel)]="news.heading" name="Heading" required></textarea>
+        </div>
+  
+          <div class="form__item">
+            <h2 class="edit-news__heading"><span class="heading-secondary--main">Opis: </span><span class="heading-secondary--sub">(Właściwa treść artykułu)</span></h2>
+            <textarea rows="4" class="form__input"
+            [(ngModel)]="news.content" name="Content" required></textarea>
+          </div>
+  
+          <div class="form__item form__item--flex">
+            <h2 class="edit-news__heading"><span class="heading-secondary--main">Sekcja: </span><span class="heading-secondary--sub">(Sekcja której dotyczy treść artykułu)</span></h2>
+            <select name="Section" class="form__select" required [(ngModel)]="news.section">
+              <option value="poland">Polska</option>
+              <option value="world">Świat</option>
+              <option value="business">Biznes</option>
+              <option value="sport">Sport</option>
+              <option value="policy">Polityka</option>
+            </select>
+          </div>
+  
+          <div>
+            <label class="form__item form__item--short" for="IsImportant"><h2 class="edit-news__heading"><span class="heading-secondary--main">Oznacz jako ważny </span><span class="heading-secondary--sub">(Artykuł zostanie dodany do najważniejszych wiadomości)</span></h2> <input type="checkbox" class="form__checkbox" value="true" name="IsImportant" [(ngModel)]="news.isImportant"> </label>
+          </div>
+  
+          <div class="form__item form__item--inline">
+              <button class="form__btn btn btn--success" type="submit" [disabled]="newsForm.invalid">Zapisz</button>
+              <button class="btn btn--danger" type="reset">Wyczyść</button>
+          </div>
+    </div>
+    </form>
+  <div class="edit-news edit-news--preview">
+  </div>
+  
+  

@@ -1,0 +1,17 @@
+@import '../scss/abstracts/vars';
+.container {
+  width: $width;
+  // height: 300rem;
+  margin: 0 auto;
+  background-color: white;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+
+}
+
+.content {
+  margin-top: $navbar-height;
+}
+

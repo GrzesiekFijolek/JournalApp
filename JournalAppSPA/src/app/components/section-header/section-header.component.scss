@@ -1,0 +1,49 @@
+@import '../../../scss/abstracts/vars';
+@import '../../../scss/abstracts/mixins';
+
+.section-header {
+  width: 100%;
+  margin-top: $home-section-margin;
+  margin-bottom: calc(1.5*#{$section-gap});
+
+  &__text {
+      width: 100%;
+      padding: 0.2rem 0 .5rem 4rem;
+      cursor: pointer;
+      display: inline-block;
+
+      &--poland {
+        @include section-header($color-poland);
+      }
+    
+      &--world {
+        @include section-header($color-world);
+      }
+      &--business {
+        @include section-header($color-business);
+      }
+      &--sport {
+        @include section-header($color-sport);
+      }
+      &--policy {
+        @include section-header($color-policy);
+      }
+  }
+
+  &--poland {
+    border-top: solid 5px $color-poland;
+  }
+
+  &--world {
+    border-top: solid 5px $color-world;
+  }
+  &--business {
+    border-top: solid 5px $color-business;
+  }
+  &--sport {
+    border-top: solid 5px $color-sport;
+  }
+  &--policy {
+    border-top: solid 5px $color-policy;
+  }
+}

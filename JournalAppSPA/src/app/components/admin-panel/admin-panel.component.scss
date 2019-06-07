@@ -1,0 +1,59 @@
+@import '../../../scss/abstracts/vars';
+@import '../../../scss/abstracts/mixins';
+
+.admin-panel {
+  max-width: $width;
+  margin-top: 7rem;
+
+  &__user-list {
+    @include panelTable();
+
+  }
+
+  &__header {
+    @include panelHeader();
+  }
+
+  &__item {
+    @include table();
+    justify-content: space-between;
+    @include tableShading();
+
+    &:hover > &--username {
+      font-weight: 700;
+      transition: all .1s;
+    }
+
+    &:hover > &--photo {
+      border: solid 2px rgba(black, 1);
+    }
+
+    &--username {
+      width: 25rem;
+      min-width: 15rem;
+    }
+
+    &--buttons {
+       width: 22rem;
+    }
+
+    &--roles {
+      width: 18rem;
+    }
+
+    &--photo {
+      height: 4rem;
+      border: solid 2px rgba(black, 0);
+    }
+  }
+
+  &__modal {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__role-name {
+    padding-right: 1rem;
+  }
+}
+

@@ -1,0 +1,125 @@
+
+.form {
+
+  &__file {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    display: block;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+
+    &--inline {
+      flex-direction: row;
+      justify-content: center;
+      }
+  }
+
+  &__item {
+    margin: 0.5rem 1rem 0.5rem 1rem;
+
+    &--short {
+      display: flex;
+      width: 55%;
+      min-width: 45rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &--inline {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    }
+  }
+
+  &__input {
+  width: 70rem;
+  font-size: 1.6rem;
+  border-radius: 3px;
+  padding: .8rem 1.2rem .8rem 1.2rem;
+  margin: .2rem .4rem .2rem .4rem;
+  // border-bottom: 3px solid green;
+  display: block;
+
+  @media (max-width: 75rem) {
+    width: 100%;
+  }
+    
+    &--register {
+      // border: 3px solid rgba($color: #000000, $alpha: 0);
+      width: 45rem;
+      font-size: 2.5rem;
+    }
+
+
+    // &:focus {
+    //   border: 3px solid $color-btn-primary;
+    //   box-shadow:#232323 4px 6px 7px;
+
+    // }
+  
+    &--inline {
+      width: 24rem;
+      display: inline-block;
+      &:not(:last-child) {
+        margin-right: 2rem;
+        padding: .8rem .8rem .2rem .8rem;
+      }
+  
+      &:last-of-type {
+        margin-right: 4rem ;
+      }
+    }
+
+
+
+
+    &--invalid {
+      border-bottom: 3px solid $color-warning;
+    }
+
+  }
+
+  &__invalid-feedback {
+    min-width: 100%;
+    min-height: 2.8rem;
+    color: $text-color;
+    font-size: 1.6rem;
+    padding: .5rem 1.5rem .5rem 1.2rem;
+    align-self: flex-start;
+    font-style: italic;
+  }
+
+  &__checkbox {
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+  }
+
+  &__select {
+    width: 15rem;
+    font-size: 1.8rem;
+    border-radius: 3px;
+    padding: .8rem 1.2rem .8rem 1.2rem;
+    margin: .2rem .4rem .2rem .4rem;
+  }
+
+  &__img {
+    padding: 1rem;
+    display: block;
+    max-width: 80rem;
+
+    &--register {
+      width: 20rem;
+      align-self: center;
+    }
+  }
+
+}

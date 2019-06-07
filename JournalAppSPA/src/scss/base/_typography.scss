@@ -1,0 +1,41 @@
+@import '../abstracts/vars';
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.heading-primary {
+  font-size: 3.5rem;
+  padding: 3.5rem 2rem 1rem 2rem !important;
+
+}
+
+.heading-secondary {
+  font-size: $h-secondary;
+  font-weight: 700;
+  // text-transform: uppercase;
+
+  &--main {
+    display: block;
+    font-size: 2rem;
+  }
+
+  &--sub {
+    display: block;
+    font-size: calc(#{$h-secondary} *0.65);
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  &--inline {
+    display: inline-block !important;
+  }
+}
+
+.heading-tertiary {
+  font-size: $h-tertiary;
+  font-style: normal;
+  font-weight: 400;
+}

@@ -1,0 +1,74 @@
+@import 'vars';
+
+@mixin section-header($color) {
+  background-color: $color;
+  width: $section-header-width;
+  display: inline-block;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+}
+
+@mixin box-shadow($color) {
+  box-shadow: 0 0  1rem darken($color, $amount: 5);
+}
+
+@mixin box-shadow-for-latest-news($color) {
+  box-shadow: 0 0 .7rem darken($color, $amount: 4);
+}
+
+@mixin grid-3-cols() {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(20rem, 1fr));
+  grid-gap: $grid-gap;
+}
+
+@mixin grid-2-cols() {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(20rem, 1fr));
+  grid-gap: $grid-gap;
+}
+
+@mixin grid-4-cols() {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(15rem, 1fr));
+  // grid-template-rows: repeat(1, minmax(15rem, 1fr));
+  grid-gap: $grid-gap;
+  grid-auto-rows: min-content;
+}
+
+@mixin table() {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+@mixin panelTable() {
+  padding: 2rem;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid silver;
+}
+
+@mixin panelHeader() {
+  @include table;
+  background-color: $color-table-header;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1.5rem;
+}
+
+@mixin tableShading() {
+  &:nth-child(odd) {
+    background-color:$color-table-odd;
+  }
+
+  &:nth-child(even) {
+    background-color: $color-table-even;
+  }
+
+  &:not(:first-child) {
+    border-top: 1px silver solid
+  }
+}

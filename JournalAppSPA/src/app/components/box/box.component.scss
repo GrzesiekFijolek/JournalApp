@@ -1,0 +1,61 @@
+@import '../../../scss/abstracts/vars';
+@import '../../../scss/abstracts/mixins';
+
+.box {
+  width: 100%;
+  display: block;
+  height: 100%;
+  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  &:hover {
+    cursor: pointer;
+  }
+  &__title {
+    padding: $padding-box;
+    height: $box-text-height;
+    width: auto;
+    display: inline-block;
+    border-left: 4px solid rgba(0,0,0,0);
+
+  }
+
+  &__photo {
+    overflow: hidden;
+    max-width: 100%;
+    
+    &__img {
+      width: 100%;
+
+    &--bright {
+      filter: saturate(95%) opacity(95%);
+    }
+
+    }
+  }
+
+  &__shadow {
+
+    &--poland {
+      @include box-shadow($color-poland);
+    }
+
+    &--business {
+      @include box-shadow($color-business);
+    }
+
+    &--world {
+      @include box-shadow($color-world);
+
+    }
+
+    &--policy {
+      @include box-shadow($color-policy);
+    }
+
+    &--sport {
+      @include box-shadow($color-sport);
+    }
+  }
+
+}
+

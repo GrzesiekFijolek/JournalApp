@@ -1,0 +1,15 @@
+.edit-role {
+  display: flex;
+  align-items: center;
+
+  &__input {
+    margin-right: 2rem;
+  }
+
+  &__text {
+    padding: 1rem 1rem 1rem 1rem;
+    display: inline-block;
+    font-size: 1.8rem;
+  }
+
+}

@@ -1,0 +1,14 @@
+C:\Projects\JournalApp\JournalAppAPI\bin\Debug\netcoreapp2.1\JournalAppAPI.deps.json
+C:\Projects\JournalApp\JournalAppAPI\bin\Debug\netcoreapp2.1\JournalAppAPI.runtimeconfig.json
+C:\Projects\JournalApp\JournalAppAPI\bin\Debug\netcoreapp2.1\JournalAppAPI.runtimeconfig.dev.json
+C:\Projects\JournalApp\JournalAppAPI\bin\Debug\netcoreapp2.1\JournalAppAPI.dll
+C:\Projects\JournalApp\JournalAppAPI\obj\Debug\netcoreapp2.1\JournalAppAPI.csprojAssemblyReference.cache
+C:\Projects\JournalApp\JournalAppAPI\obj\Debug\netcoreapp2.1\JournalAppAPI.csproj.CoreCompileInputs.cache
+C:\Projects\JournalApp\JournalAppAPI\obj\Debug\netcoreapp2.1\JournalAppAPI.RazorAssemblyInfo.cache
+C:\Projects\JournalApp\JournalAppAPI\obj\Debug\netcoreapp2.1\JournalAppAPI.RazorAssemblyInfo.cs
+C:\Projects\JournalApp\JournalAppAPI\obj\Debug\netcoreapp2.1\JournalAppAPI.AssemblyInfoInputs.cache
+C:\Projects\JournalApp\JournalAppAPI\obj\Debug\netcoreapp2.1\JournalAppAPI.AssemblyInfo.cs
+C:\Projects\JournalApp\JournalAppAPI\obj\Debug\netcoreapp2.1\JournalAppAPI.RazorTargetAssemblyInfo.cache
+C:\Projects\JournalApp\JournalAppAPI\bin\Debug\netcoreapp2.1\JournalAppAPI.pdb
+C:\Projects\JournalApp\JournalAppAPI\obj\Debug\netcoreapp2.1\JournalAppAPI.dll
+C:\Projects\JournalApp\JournalAppAPI\obj\Debug\netcoreapp2.1\JournalAppAPI.pdb

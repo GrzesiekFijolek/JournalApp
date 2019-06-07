@@ -1,0 +1,30 @@
+<nav class="nav">
+  <div class="nav__wrapper">
+      <ul class="nav__list nav__list--left">
+          <li class="nav__item nav__item--news"><a [routerLink]="['']" class="nav__link nav__link--news">Lorem.pl</a></li>
+          <li class="nav__item nav__item--world"><a [routerLink]="['/world']" class="nav__link nav__link--world">Świat</a></li>
+          <li class="nav__item nav__item--poland"><a [routerLink]="['/poland']" class="nav__link nav__link--poland">Polska</a></li>
+          <li class="nav__item nav__item--policy"><a [routerLink]="['/policy']" class="nav__link nav__link--policy">Polityka</a></li>
+          <li class="nav__item nav__item--business"><a [routerLink]="['/business']" class="nav__link nav__link--business">Biznes</a></li>
+          <li class="nav__item nav__item--sport"><a [routerLink]="['/sport']" class="nav__link nav__link--sport">Sport</a></li>
+      </ul>
+        <ul  class="nav__list nav__list--right">
+          <li class="nav__login" (click)="toogleUserPanel()" *ngIf="isLoggedIn()" name="user-info">{{username}}</li>
+          <li class="nav__login" (click)="toogleUserPanel()" *ngIf="isLoggedIn()" name="user-info">
+            <img class="nav__photo" src="{{photo}}" alt="" name="user-info">
+          </li>
+          <li class="nav__login" (click)="toogleUserPanel()" *ngIf="!isLoggedIn()">
+            <i class="fa fa-user nav__login-user-icon" name="user-info"></i>
+          </li>
+        </ul>
+        
+        <app-login 
+        [show] = "showPanel"
+        (hideLogin)="hideUserPanel()"
+        ></app-login>
+  </div>
+</nav>
+
+
+
+

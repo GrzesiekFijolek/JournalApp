@@ -1,0 +1,62 @@
+@import '../abstracts/vars';
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+// *:focus {
+//   outline:none;
+// }
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  resize: vertical;
+}
+
+.modal {
+  opacity: 0; /* Fade in/out animation. */
+  transition: opacity 0.2s ease-in;
+}
+
+.modal-content {
+  color: #333;
+  background-color: #fff;
+  padding: 25px;
+}
+
+.modal-header {
+  display: flex;
+  padding-bottom: 14px;
+}
+
+.modal-header  > h2 {
+  flex: 1;
+  align-self: center;
+  font-size: 1.8rem;
+}
+
+.modal-header .close {
+  margin: 1rem;
+  padding: .1rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+  border-style: none;
+  cursor: pointer;
+  border-radius: 1rem;
+  width: 4rem;
+  background-color: $color-btn-danger;
+  &:hover {
+    background-color: darken($color-btn-danger, 10%);
+  }
+}

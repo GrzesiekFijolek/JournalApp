@@ -1,0 +1,35 @@
+.comment {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+
+  &__header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+     background-color: #fafafa;
+
+    &__img {
+      height: 4rem;
+      margin: 1rem;
+    }
+
+    &__author {
+      font-size: 1.8rem;
+    }
+
+    &--public {
+      display: flex;
+      align-items: center;
+    }
+
+  }
+
+  &__content {
+    font-size: 1.6rem;
+    text-align: justify;
+    padding: 1rem 1rem 1rem 2rem;
+    margin-left: 2rem;
+    border-bottom: 1px #777 solid;
+  }
+}

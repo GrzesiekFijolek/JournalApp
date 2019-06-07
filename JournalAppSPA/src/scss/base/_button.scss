@@ -1,0 +1,93 @@
+@import '../abstracts/vars';
+.btn {
+  padding: .7rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-style: none;
+  cursor: pointer;
+  border-radius: 1rem;
+  width: 16rem;
+  height: 3.2rem;
+  min-width: 12rem;
+
+  &--primary {
+    background-color: $color-btn-primary;
+    transition: all .3s;
+
+    &:hover {
+      background-color: darken($color-btn-primary, 10%);
+    }
+  }
+
+  &--success {
+    background-color: $color-btn-success;
+    transition: all .3s;
+
+    &:hover {
+      background-color: darken($color-btn-success, 10%);
+    }
+  }
+
+  &--danger {
+    background-color: $color-btn-danger;
+    transition: all .3s;
+
+    &:hover {
+      background-color: darken($color-btn-danger, 10%);
+    }
+  }
+
+  &--delete {
+    width: 4rem;
+    min-width: 4rem;
+    background-color: $color-btn-danger;
+    &:hover {
+      background-color: darken($color-btn-danger, 10%);
+    }
+  }
+
+  &--file {
+    background-color: $color-btn-file;
+    transition: all .3s;
+    display: block;
+    padding: 0;
+    align-self: center;
+    margin-bottom: 1rem;
+
+    &:hover {
+      background-color: darken($color-btn-file, 10%);
+    }
+  }
+
+  &--edit {
+    background-color: $color-btn-edit;
+
+    &:hover {
+      background-color: darken($color-btn-edit, 10%);
+    }
+  }
+
+  &--up {
+    height: 6rem;
+    width: 6rem;
+    font-size: 3rem;
+
+    background-color: $color-btn-up;
+
+    &:hover {
+      background-color: darken($color-btn-up, 10%);
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: 1.2rem;
+  }
+
+  &--label {
+    width: 100%;
+    display: block;
+    line-height: 3.2rem;
+    cursor: pointer;
+  }
+
+}

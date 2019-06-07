@@ -1,0 +1,44 @@
+$h-secondary: 1.8rem;
+$h-tertiary: 1.5rem;
+
+$color-primary: #212121;
+$color-secondary: #383838;
+$text-color: ghostwhite;
+$color-world: dodgerblue;
+$color-poland: #ff3d00;
+$color-policy: #64dd17;
+$color-business: #ffc400;
+$color-sport: #ff9100;
+
+$color-btn-primary: navajowhite;
+$color-btn-success: mediumseagreen;
+$color-btn-danger: salmon;
+$color-btn-file: lightskyblue;
+$color-btn-edit: mediumpurple;
+$color-btn-up: #fafafa;
+
+$color-table-header: whitesmoke;
+$color-table-odd: mintcream;
+$color-table-even: ghostwhite;
+
+
+$color-warning: crimson;
+
+$width: 1200px;
+$navbar-height: 5rem;
+
+$padding-news-detail: 1rem;
+$padding-box: 1rem;
+$margin-box: calc(#{$padding-box});
+$box-text-height: calc(2*#{$h-secondary} + 2*#{$padding-box} + #{$margin-box});
+$box-img-height: 20rem;
+$box-height: 30rem;
+$section-gap: 1.2rem;
+$grid-gap: 1.8rem;
+$grid-gap-big: 2rem;
+$grid-row: $box-height;
+$grid-row-small: calc(#{$grid-row}/2);
+$home-section-margin: calc(4*#{$grid-gap});
+$section-header-width: 25rem;
+
+$button-min-width: 12rem;

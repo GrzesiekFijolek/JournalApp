@@ -1,0 +1,23 @@
+
+.add-news {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+    
+  &__section {
+    padding-bottom: 1.2rem;
+  }
+
+  &__heading {
+    padding: 1rem 1rem 1rem 1rem;
+    display: inline-block;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    resize: horizontal;
+  }
+
+}

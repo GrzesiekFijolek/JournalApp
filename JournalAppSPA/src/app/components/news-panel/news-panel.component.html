@@ -1,0 +1,49 @@
+<div class="news-panel"
+infiniteScroll
+[infiniteScrollDistance]="0.1"
+[infiniteScrollThrottle]="400"
+(scrolled)="getNextNewsPart()">
+  <div class="news-panel__list">
+    <div class="news-panel__header">Panel edycji</div>
+    <div class="news-panel__header">
+      <div class="news-panel__header--title">Artykuł</div>
+      <div class="news-panel__header--author">Autor</div>
+      <div class="news-panel__header--section">Sekcja: </div>
+      <select name="Section" class="news-panel__header--select" required [(ngModel)]="section" (change)="getNewsForSelectedSection()">
+          <option value="all">Wszystkie Sekcje</option>
+          <option value="poland">Polska</option>
+          <option value="world">Świat</option>
+          <option value="business">Biznes</option>
+          <option value="sport">Sport</option>
+          <option value="policy">Polityka</option>
+        </select>
+    </div>
+    <div class="news-panel__item" 
+      *ngFor="let item of news; let i = index"
+      >  
+      <div class="news-panel__item--left">
+          <img src="{{item.newsPhoto}}" alt="" class="news-panel__item--img-news" [routerLink]="['/' + item.id]">
+      <div class="news-panel__item--title" [routerLink]="['/' + item.id]">{{item.shortTitle}}</div>
+      </div>
+
+        <div class="news-panel__item--right">
+            <img src="{{item.authorPhoto}}" alt="" class="news-panel__item--img-author">
+            <div class="news-panel__item--author">{{item.author}}</div>
+              <button class="btn btn--edit" (click)="editNews(i)" >Edytuj</button>
+              <button class="btn btn--delete" (click)="deleteModal.open()"><i class="fa fa-trash"></i></button>
+              <modal #deleteModal>
+                <ng-template #modalHeader><h2>Czy chcesz usunąć ten artykuł?</h2></ng-template>
+                <ng-template #modalBody>
+                <div class="admin-panel__modal">
+                  <button class="btn btn--success" 
+                  (click)="deleteNews(item.id, i)"
+                  (click)="deleteModal.close()">Tak</button>
+                  <button class="btn btn--primary"
+                  (click)="deleteModal.close()">Nie</button>
+                </div>
+                </ng-template>
+              </modal>
+      </div>
+  </div>
+</div>
+</div>

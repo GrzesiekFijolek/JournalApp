@@ -1,0 +1,147 @@
+@import '../../../scss/abstracts/vars';
+@import '../../../scss/base/utilities';
+
+.nav {
+  background-color: $color-primary;
+  width:100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: $navbar-height;
+  z-index: 9;
+  display: flex;
+
+  @media (max-width: 120rem) {
+    width: 100%;
+  }
+
+  &__login {
+    color: whitesmoke;
+    padding: 0 1rem 0 1rem;
+    list-style: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+
+    &-user-icon {
+      font-size: 4rem;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    list-style: none;
+
+    &--left {
+      align-self: flex-start;
+      justify-content: stretch;
+      align-items: center;
+      flex: 4;
+    }
+
+    &--right {
+      align-self: flex-end;
+      justify-content: flex-end;
+      flex: 1;
+      align-items: center;
+    }
+    
+  }
+  
+  &__item {
+    min-width: 12rem;
+    height: 100%;
+    height: $navbar-height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 75rem) {
+      min-width: 10rem;
+      font-size: 1.8rem;
+    }
+
+    &:first-child {
+      width: 14rem;
+    }
+
+    &--news {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 2.2rem;
+      letter-spacing: .3rem;
+
+      &:hover {
+        font-size: 2.4rem;
+      }
+    }
+
+    &--world {
+      &:hover {
+        background-color: $color-world;
+      }
+    }
+    
+    &--poland {
+      &:hover {
+        background-color: $color-poland;
+      }
+    }
+
+    &--policy {
+      &:hover {
+        background-color: $color-policy;
+      }
+    }
+
+    &--business {
+      &:hover {
+        background-color: $color-business;
+      }
+    }
+
+    &--sport {
+      &:hover {
+        background-color: $color-sport;
+      }
+    }
+  }
+
+  &__link {
+    cursor: pointer;
+
+    &:link,
+    &:visited {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $text-color;
+    }
+  }
+
+  &__wrapper {
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: $navbar-height;
+    display: flex;
+    flex-wrap: nowrap;
+    z-index: 10;
+    max-width: 120rem;
+    width: 100%;
+    
+    @media (max-width: 75rem) {
+      width: 100%;
+      padding-left: 4rem;
+      padding-right: 4rem;
+    };
+    
+  }
+
+  &__photo {
+    height: 4rem;
+    width: 4rem;
+    border: 2px solid #acacac;
+  }
+}

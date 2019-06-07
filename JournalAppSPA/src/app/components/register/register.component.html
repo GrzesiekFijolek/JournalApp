@@ -1,0 +1,28 @@
+<div class="register">
+  <h1 class="register__heading heading-primary">Stwórz konto w serwisie</h1>
+  <form class="register__form" [formGroup]="registerForm" (ngSubmit)="register()">
+    <div class="form__group">
+      <h2 class="register__heading"><span class="heading-secondary--main">Wybierz Zdjęcie:</span><span class="heading-secondary--sub">(Fotografia powinna mieć proporcje 1:1)</span> </h2>
+      <input type="file" #file id="file" class="form__file" accept="image/png, image/jpeg" name="file" (change)="imgPreview($event)" required>
+      <button class="btn btn--file"><label class="btn--label" for="file">Wybierz plik</label></button>
+      <img [src]="imgURL" *ngIf="imgURL" class="form__img form__img--register">
+      
+      <input type="text" class="form__input form__input--register" placeholder="login" formControlName="username"
+      [ngClass]="{ 'form__input--invalid': registerForm.get('username').errors && registerForm.get('username').touched }" >
+      <span class="form__invalid-feedback">{{checkUsername()}}</span>
+      <input type="password" class="form__input form__input--register" placeholder="hasło" formControlName="password" 
+      [ngClass]="{ 'form__input--invalid': registerForm.get('password').errors && registerForm.get('password').touched }">
+      <span class="form__invalid-feedback">{{checkPassword()}}</span>
+      <input type="password" class="form__input form__input--register" placeholder="potwierdź hasło" formControlName="confirm" 
+      [ngClass]="{ 'form__input--invalid': registerForm.get('confirm').hasError('noPasswordMatch') && registerForm.get('confirm').touched }">
+      <span class="form__invalid-feedback">{{checkConfirmPassword()}}</span>
+
+      <div class="form__item form__item--inline">
+          <button class="btn btn--primary" type="submit"
+          [disabled]="!registerForm.valid">Rejestracja</button>
+          <button class="btn btn--danger" type="reset" (click)="reset()">Wyczyść</button>
+      </div>
+      <span class="form__invalid-feedback">{{checkServerError()}}</span>
+    </div>
+  </form>
+</div>

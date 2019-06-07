@@ -1,0 +1,9 @@
+<div class="latest-news-item"
+[ngClass]="actualSection"
+[routerLink]="['/' + news.id.toString()]">
+  <div class="latest-news-item__time">
+    <span class="latest-news-item__time--HHmm">{{news.addedAt | date: 'HH:mm'}}</span>
+    <span class="latest-news-item__time--ddMMyy">{{news.addedAt | date: 'dd-MM-yy'}}</span>
+  </div>
+  <div class="latest-news-item__title"><h3 class="heading-tertiary">{{news.shortTitle}}</h3></div>
+</div>

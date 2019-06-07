@@ -1,0 +1,26 @@
+@import '../../../scss/abstracts/vars';
+
+.item {
+ display: flex;
+ margin-bottom: 3rem;
+ max-height: 7rem;
+ align-items: center;
+
+ &__photo {
+   &--img {
+    width: 12rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+   }
+ }
+
+ &__title {
+  padding: 1rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+ }
+}

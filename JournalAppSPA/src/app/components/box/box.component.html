@@ -1,0 +1,19 @@
+
+<div class="box"
+[routerLink]="['/'+ id]"
+[ngClass]="boxShadow"
+(mouseover)="boxHover=true"
+(mouseover)="addBoxShadow()"
+(mouseout)="boxHover=false"
+(mouseout)="addBoxShadow()"
+>
+  <div class="box__photo">
+    <img class="box__photo box__photo--img" src="{{photo}}" alt="img"
+    [class.box__photo__img--bright]="boxHover">
+    
+  </div>
+  <div class="box__title">
+    <h2 class="heading-secondary"
+    >{{title}}</h2>
+  </div>
+</div>

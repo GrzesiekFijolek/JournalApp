@@ -1,0 +1,57 @@
+@import '../../../scss/abstracts/mixins';
+
+$text-time: 1.4rem;
+
+.latest-news-item {
+  display: flex;
+  margin: 0.5rem;
+  cursor: pointer;
+  
+  &__time {
+    min-width: 8rem;
+    width: 20%;
+    &--HHmm {
+      width: 100%;
+      display: inline-block;
+      text-align: center;
+      padding: 1rem .4rem .1rem .6rem;
+      font-size: $text-time;
+    }
+
+    &--ddMMyy {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      padding: .1rem .4rem 1rem .6rem;
+      font-size: $text-time;
+    }
+
+  }
+
+  &__title {
+    width: 80%;
+    align-self: center;
+    padding-right: 1rem;
+  }
+
+  &--poland:hover {
+    @include box-shadow-for-latest-news($color-poland);
+  }
+
+  &--policy:hover {
+    @include box-shadow-for-latest-news($color-policy);
+  }
+
+  &--business:hover {
+    @include box-shadow-for-latest-news($color-business);
+  }
+
+  &--sport:hover {
+    @include box-shadow-for-latest-news($color-sport);
+  }
+
+  &--world:hover {
+    @include box-shadow-for-latest-news($color-world);
+  }
+
+}

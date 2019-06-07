@@ -1,0 +1,29 @@
+<div class="login"
+[class.animation-show]="show"
+[class.animation-hide]="!show">
+  <div *ngIf="showLoginPanel">
+    <form #loginForm="ngForm" class="login__form" (ngSubmit)="login()">
+      <div class="form__group form__group--inline">
+        <input type="text" class="form__input form__input--inline" placeholder="login" name="username" [(ngModel)]="model.username">
+        <input type="password" class="form__input form__input--inline" placeholder="hasło" name="password" [(ngModel)]="model.password">
+        <button class="form__btn btn btn--success" type="submit">Zaloguj</button>
+      </div>
+    </form>
+    <span class="form__invalid-feedback">{{error}}</span>
+      <div class="login__user-panel">
+        <span class="login__user-panel--text">Nie masz konta?</span>
+        <button class="btn btn--primary"
+        [routerLink]="['/register']" 
+        (click)="hide($event)" >Zarejestruj się</button>
+    </div>
+  </div>
+  <div class="login__user-panel" *ngIf="showUserPanel">
+    <button class="btn btn--primary" [routerLink]="['/admin-panel']" 
+      *appHasRole="['Admin']">Panel admina</button>
+    <button class="btn btn--primary" [routerLink]="['/news-panel']" 
+      *appHasRole="['Moderator']">Panel Moderatora</button>
+    <button class="btn btn--primary" [routerLink]="['/add']" 
+    (click)="hide()" *appHasRole="['Moderator']">Dodaj artykuł</button>
+    <button class="btn btn--primary" (click)="logout()">Wyloguj</button>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="admin-panel"
+infiniteScroll
+[infiniteScrollDistance]="0.1"
+[infiniteScrollThrottle]="400"
+(scrolled)="getNextUsersPart()">
+  <div class="admin-panel__user-list">
+    <div class="admin-panel__header">Panel edycji użytkowników</div>
+    <div class="admin-panel__item"
+    *ngFor="let user of users; let i = index">
+      <img src="{{user.photo}}" alt="" class="admin-panel__item--photo">
+      <div class="admin-panel__item--username">{{user.username}}</div>
+      <div class="admin-panel__item--roles">
+        <span class="admin-panel__role-name" *ngFor="let item of user.userRoles">{{item}}</span></div>
+        <div class="admin-panel__item-buttons">
+          <button class="btn btn--edit" (click)="editRolesModal.open()">Edytuj</button>
+          <modal #editRolesModal>
+            <ng-template #modalHeader><h2>edycja roli użytkownika {{user.username}}</h2></ng-template>
+            <ng-template #modalBody>
+              <app-edit-role [roles]="user.userRoles" [username]="user.username"
+              (changeUserRoles)="updateUser($event, i)"
+              (changeUserRoles)="editRolesModal.close()"></app-edit-role>
+            </ng-template>
+          </modal>
+          <button class="btn btn--delete" (click)="deleteModal.open()"><i class="fa fa-trash"></i></button>
+          <modal #deleteModal>
+            <ng-template #modalHeader><h2>Czy chcesz usunąć użytkownika {{user.username}}?</h2></ng-template>
+            <ng-template #modalBody>
+            <div class="admin-panel__modal">
+              <button class="btn btn--success" 
+              (click)="deleteUser(i)"
+              (click)="deleteModal.close()">Tak</button>
+              <button class="btn btn--primary"
+              (click)="deleteModal.close()">Nie</button>
+            </div>
+            </ng-template>
+          </modal>
+        </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+$duration: 700ms;
+
+.animation-show {
+  transition: ease-in $duration;
+  max-height: 22rem;
+  overflow: hidden;
+}
+
+.animation-hide {
+  max-height: 0;
+  overflow: hidden;
+  transition: ease-out $duration;
+}

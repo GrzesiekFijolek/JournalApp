@@ -1,0 +1,49 @@
+@import '../../../scss/abstracts/vars';
+
+.section {
+  @media (max-width: 120rem) {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  &__grid {
+    width: 100%;
+    padding-top: $grid-gap;
+    padding-bottom: $grid-gap;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    grid-gap: $grid-gap;
+
+    border-top: 4px solid black;
+
+    @media (max-width: 75rem) {
+      grid-template-columns: repeat(3, minmax(120px, 1fr));
+    }
+  }
+
+  &__header {
+
+    &--poland {
+      border-bottom:4px solid $color-poland;
+    }
+
+    &--business {
+      border-bottom:4px solid $color-business;
+    }
+
+    &--world {
+      border-bottom:4px solid $color-world;
+
+    }
+
+    &--policy {
+      border-bottom:4px solid $color-policy;
+    }
+
+    &--sport {
+      border-bottom:4px solid $color-sport;
+    }
+  }
+ 
+}

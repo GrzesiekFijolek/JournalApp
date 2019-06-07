@@ -1,0 +1,9 @@
+.latest-news {
+  max-height:500px;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  
+}

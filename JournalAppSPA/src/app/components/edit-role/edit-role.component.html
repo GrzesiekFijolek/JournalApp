@@ -1,0 +1,9 @@
+<div class="edit-role">
+  <label for="moderator" class="edit-role edit-role__input">
+    <input type="checkbox" name="moderator" id="" class="form__checkbox" 
+    [(ngModel)]="isModerator"><span class=" edit-role edit-role__text">Moderator</span></label>
+<label for="admin" class="edit-role edit-role__input">
+  <input type="checkbox" name="admin" id="" class="form__checkbox" 
+  [(ngModel)]="isAdmin" ><span class="edit-role edit-role__text">Admin</span></label>
+<button class="btn btn--success" (click)="edit()">Edytuj</button>
+</div>

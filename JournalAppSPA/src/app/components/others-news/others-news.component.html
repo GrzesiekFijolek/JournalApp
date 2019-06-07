@@ -1,0 +1,10 @@
+<div class="other__news"
+[ngClass]="actualSection">
+<div class="other__news__header">Ostatnio dodane w sekcji {{header}}</div>
+  <app-others-news-item class="other__news__item"
+  *ngFor="let item of otherNews"
+  [photoUrl]="item.photoUrl"
+  [id]="item.id"
+  [shortTitle]="item.shortTitle"
+  ></app-others-news-item>
+</div>
